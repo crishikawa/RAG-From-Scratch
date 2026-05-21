@@ -11,8 +11,8 @@ Large language models have a knowledge cutoff and no access to your private data
 ```
 RAG-From-Scratch/
 ├── basic_rag.py              # URL + PDF input, interactive Q&A loop
-├── multi_query_rag.py            # 5-perspective query expansion
-├── rag_fusion.py             # Coming soon
+├── multi_query_rag.py        # 5-perspective query expansion
+├── rag_fusion.py             # 4-query retrieval with RRF scoring
 ├── decomposition.py          # Coming soon
 ├── step_back.py              # Coming soon
 ├── hyde.py                   # Coming soon
@@ -33,7 +33,7 @@ The foundation. Load any webpage or PDF, chunk it, embed it with a local Hugging
 ### 02 — Multi-Query `multi_query_rag.py`
 Rewrites the user's question into 5 different perspectives and retrieves documents for each, then takes the unique union. Solves the problem of a single poorly-worded query missing relevant chunks.
 
-### 03 — RAG Fusion *(coming soon)*
+### 03 — RAG Fusion `rag_fusion.py`
 Extends Multi-Query by adding Reciprocal Rank Fusion (RRF) scoring documents that appear consistently across multiple query results are ranked higher, improving retrieval precision.
 
 ### 04 — Decomposition *(coming soon)*
