@@ -11,7 +11,7 @@ Large language models have a knowledge cutoff and no access to your private data
 ```
 RAG-From-Scratch/
 ├── basic_rag.py              # URL + PDF input, interactive Q&A loop
-├── multi_query.py            # 5-perspective query expansion
+├── multi_query_rag.py            # 5-perspective query expansion
 ├── rag_fusion.py             # Coming soon
 ├── decomposition.py          # Coming soon
 ├── step_back.py              # Coming soon
