@@ -30,7 +30,7 @@ The foundation. Load any webpage or PDF, chunk it, embed it with a local Hugging
 - Local PDF files
 - Multi-turn Q&A session without reloading the document
 
-### 02 — Multi-Query 'multi_query_rag.py'
+### 02 — Multi-Query `multi_query_rag.py`
 Rewrites the user's question into 5 different perspectives and retrieves documents for each, then takes the unique union. Solves the problem of a single poorly-worded query missing relevant chunks.
 
 ### 03 — RAG Fusion *(coming soon)*
