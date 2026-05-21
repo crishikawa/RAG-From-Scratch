@@ -3,9 +3,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.document_loaders import WebBaseLoader
+from langchain_community.document_loaders import WebBaseLoader, PyPDFLoader
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain_anthropic import ChatAnthropic
@@ -17,10 +17,8 @@ from langchain_core.prompts import ChatPromptTemplate
 source = input("Enter a URL or path to a PDF: ")
 
 if source.endswith(".pdf"):
-    from langchain_community.document_loaders import PyPDFLoader
     loader = PyPDFLoader(source)
 else:
-    from langchain_community.document_loaders import WebBaseLoader
     loader = WebBaseLoader(web_paths=(source,))
 
 docs = loader.load()
@@ -31,7 +29,7 @@ splits = text_splitter.split_documents(docs)
 
 # Embed
 vectorstore = Chroma.from_documents(documents=splits, 
-                                    embedding=HuggingFaceEmbeddings())
+                                    embedding=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2"))
 
 retriever = vectorstore.as_retriever()
 
