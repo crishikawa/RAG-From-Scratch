@@ -4,7 +4,7 @@ A progressive implementation of Retrieval-Augmented Generation (RAG) pipelines, 
 
 ## What is RAG?
 
-Large language models have a knowledge cutoff and no access to your private data. RAG solves this by retrieving relevant context from a document store at query time and injecting it into the prompt — grounding the model's response in real, up-to-date sources rather than relying on training data alone.
+Large language models have a knowledge cutoff and no access to your private data. RAG solves this by retrieving relevant context from a document store at query time and injecting it into the prompt, grounding the model's response in real, up-to-date sources rather than relying on training data alone.
 
 ## Project Structure
 
@@ -34,7 +34,7 @@ The foundation. Load any webpage or PDF, chunk it, embed it with a local Hugging
 Rewrites the user's question into 5 different perspectives and retrieves documents for each, then takes the unique union. Solves the problem of a single poorly-worded query missing relevant chunks.
 
 ### 03 — RAG Fusion *(coming soon)*
-Extends Multi-Query by adding Reciprocal Rank Fusion (RRF) scoring — documents that appear consistently across multiple query results are ranked higher, improving retrieval precision.
+Extends Multi-Query by adding Reciprocal Rank Fusion (RRF) scoring documents that appear consistently across multiple query results are ranked higher, improving retrieval precision.
 
 ### 04 — Decomposition *(coming soon)*
 Breaks complex multi-part questions into isolated sub-questions, answers each with its own RAG chain, then synthesizes a final answer. Effective for questions that span multiple topics.
