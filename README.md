@@ -14,7 +14,7 @@ RAG-From-Scratch/
 ├── multi_query_rag.py        # 5-perspective query expansion
 ├── rag_fusion.py             # 4-query retrieval with RRF scoring
 ├── decomposition.py          # 3 sub-query decomposition + synthesized answer
-├── step_back.py              # Coming soon
+├── step_back.py              # Broader question reformulation before retrieval
 ├── hyde.py                   # Coming soon
 ├── .env.example
 └── requirements.txt
@@ -39,7 +39,7 @@ Extends Multi-Query by adding Reciprocal Rank Fusion (RRF) scoring documents tha
 ### 04 — Decomposition `decomposition_rag.py`
 Breaks complex multi-part questions into isolated sub-questions, answers each with its own RAG chain, then synthesizes a final answer. Effective for questions that span multiple topics.
 
-### 05 — Step Back *(coming soon)*
+### 05 — Step Back `step_back_rag.py`
 Rewrites the user's specific question into a broader, more general version before retrieval — capturing higher-level context that a narrow query might miss.
 
 ### 06 — HyDE *(coming soon)*
