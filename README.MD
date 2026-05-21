@@ -11,7 +11,7 @@ Large language models have a knowledge cutoff and no access to your private data
 ```
 RAG-From-Scratch/
 ├── basic_rag.py              # URL + PDF input, interactive Q&A loop
-├── multi_query.py            # Coming soon
+├── multi_query.py            # 5-perspective query expansion
 ├── rag_fusion.py             # Coming soon
 ├── decomposition.py          # Coming soon
 ├── step_back.py              # Coming soon
@@ -30,7 +30,7 @@ The foundation. Load any webpage or PDF, chunk it, embed it with a local Hugging
 - Local PDF files
 - Multi-turn Q&A session without reloading the document
 
-### 02 — Multi-Query *(coming soon)*
+### 02 — Multi-Query 'multi_query_rag.py'
 Rewrites the user's question into 5 different perspectives and retrieves documents for each, then takes the unique union. Solves the problem of a single poorly-worded query missing relevant chunks.
 
 ### 03 — RAG Fusion *(coming soon)*

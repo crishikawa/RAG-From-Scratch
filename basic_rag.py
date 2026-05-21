@@ -37,14 +37,15 @@ retriever = vectorstore.as_retriever()
 
 #### RETRIEVAL and GENERATION ####
 
-# Prompt
+# LLM
+llm = ChatAnthropic(model="claude-sonnet-4-6", temperature=0)
+
+# RAG Prompt
 prompt = ChatPromptTemplate.from_template("""Answer the question based only on the following context:
 {context}
 
 Question: {question}
 """)
-# LLM
-llm = ChatAnthropic(model="claude-sonnet-4-6", temperature=0)
 
 # Post-processing
 def format_docs(docs):
