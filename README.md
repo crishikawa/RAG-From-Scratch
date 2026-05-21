@@ -13,7 +13,7 @@ RAG-From-Scratch/
 ├── basic_rag.py              # URL + PDF input, interactive Q&A loop
 ├── multi_query_rag.py        # 5-perspective query expansion
 ├── rag_fusion.py             # 4-query retrieval with RRF scoring
-├── decomposition.py          # Coming soon
+├── decomposition.py          # 3 sub-query decomposition + synthesized answer
 ├── step_back.py              # Coming soon
 ├── hyde.py                   # Coming soon
 ├── .env.example
@@ -36,7 +36,7 @@ Rewrites the user's question into 5 different perspectives and retrieves documen
 ### 03 — RAG Fusion `rag_fusion.py`
 Extends Multi-Query by adding Reciprocal Rank Fusion (RRF) scoring documents that appear consistently across multiple query results are ranked higher, improving retrieval precision.
 
-### 04 — Decomposition *(coming soon)*
+### 04 — Decomposition `decomposition_rag.py`
 Breaks complex multi-part questions into isolated sub-questions, answers each with its own RAG chain, then synthesizes a final answer. Effective for questions that span multiple topics.
 
 ### 05 — Step Back *(coming soon)*
