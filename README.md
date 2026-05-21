@@ -14,8 +14,8 @@ RAG-From-Scratch/
 ├── multi_query_rag.py        # 5-perspective query expansion
 ├── rag_fusion.py             # 4-query retrieval with RRF scoring
 ├── decomposition.py          # 3 sub-query decomposition + synthesized answer
-├── step_back.py              # Broader question reformulation before retrieval
-├── hyde.py                   # Coming soon
+├── step_back.py              # Broader question reformulation for retrieval
+├── hyde.py                   # hypothetical answer generation for retrievel
 ├── .env.example
 └── requirements.txt
 ```
@@ -42,7 +42,7 @@ Breaks complex multi-part questions into isolated sub-questions, answers each wi
 ### 05 — Step Back `step_back_rag.py`
 Rewrites the user's specific question into a broader, more general version before retrieval — capturing higher-level context that a narrow query might miss.
 
-### 06 — HyDE *(coming soon)*
+### 06 — HyDE `hyde_rag.py`
 Hypothetical Document Embeddings. Instead of searching with the question directly, generates a hypothetical answer first and uses that as the search query. Particularly effective for technical and domain-specific content.
 
 ## Stack
